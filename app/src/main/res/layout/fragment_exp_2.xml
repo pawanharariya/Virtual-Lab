@@ -1,0 +1,208 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/check_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Check Connection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Output"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/white"
+        android:text="Undo"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@id/check_connection"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/diode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/diode45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/diode2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/diode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:rotationX="180"
+        android:src="@drawable/diode45"
+        app:layout_constraintEnd_toStartOf="@id/diode1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/diode3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/diode45"
+        app:layout_constraintEnd_toStartOf="@id/diode4"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diode2" />
+
+    <ImageView
+        android:id="@+id/diode4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotationX="180"
+        android:src="@drawable/diode45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/diode3"
+        app:layout_constraintTop_toBottomOf="@id/diode1" />
+
+    <ImageView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/ac_source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diode3" />
+
+    <ImageView
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/resistor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diode4" />
+
+    <RadioButton
+        android:id="@+id/terminal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:layout_marginBottom="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/diode1"
+        app:layout_constraintStart_toStartOf="@id/diode1" />
+
+    <RadioButton
+        android:id="@+id/terminal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/source"
+        app:layout_constraintEnd_toEndOf="@id/source"
+        app:layout_constraintStart_toStartOf="@id/source" />
+
+
+    <RadioButton
+        android:id="@+id/terminal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-17dp"
+        android:layout_marginEnd="-17dp"
+        android:layout_marginBottom="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintEnd_toStartOf="@id/diode3"
+        app:layout_constraintTop_toTopOf="@id/diode3" />
+
+    <RadioButton
+        android:id="@+id/terminal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/load"
+        app:layout_constraintEnd_toEndOf="@id/load"
+        app:layout_constraintStart_toStartOf="@id/load" />
+
+
+    <RadioButton
+        android:id="@+id/terminal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toEndOf="@id/diode4"
+        app:layout_constraintTop_toTopOf="@id/diode4" />
+
+    <RadioButton
+        android:id="@+id/terminal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintEnd_toEndOf="@id/load"
+        app:layout_constraintStart_toStartOf="@id/load"
+        app:layout_constraintTop_toBottomOf="@id/load" />
+
+    <RadioButton
+        android:id="@+id/terminal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toStartOf="@id/diode4"
+        app:layout_constraintTop_toBottomOf="@id/diode4" />
+
+    <RadioButton
+        android:id="@+id/terminal8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintEnd_toEndOf="@id/source"
+        app:layout_constraintStart_toStartOf="@id/source"
+        app:layout_constraintTop_toBottomOf="@id/source" />
+
+    <com.pawan.vlab.utils.DrawView
+        android:id="@+id/drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

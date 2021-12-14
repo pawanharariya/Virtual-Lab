@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/experiments_navigation"
+    app:startDestination="@id/navigation_experiment_list">
+
+    <fragment
+        android:id="@+id/navigation_experiment_list"
+        android:name="com.pawan.vlab.ExperimentListFragment"
+        android:label="List of Experiments"
+        tools:layout="@layout/fragment_experiment_list">
+        <action
+            android:id="@+id/exp_list_to_exp_home"
+            app:destination="@id/navigation_exp_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exp_home"
+        android:name="com.pawan.vlab.ExpHomeFragment"
+        android:label="Experiment"
+        tools:layout="@layout/fragment_exp_home">
+        <action
+            android:id="@+id/exp_home_to_exp_1"
+            app:destination="@id/navigation_exp_1" />
+        <action
+            android:id="@+id/exp_home_to_exp_2"
+            app:destination="@id/navigation_exp_2" />
+        <action
+            android:id="@+id/exp_home_to_exp_3"
+            app:destination="@id/navigation_exp_3" />
+        <action
+            android:id="@+id/exp_home_to_exp_4"
+            app:destination="@id/navigation_exp_4" />
+        <action
+            android:id="@+id/exp_home_to_exp_theory"
+            app:destination="@id/navigation_exp_theory" />
+        <action
+            android:id="@+id/exp_home_to_circuit_diagram"
+            app:destination="@id/navigation_exp_circuit_diagram" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exp_1"
+        android:name="com.pawan.vlab.Exp1Fragment"
+        android:label="Perform"
+        tools:layout="@layout/fragment_exp_1">
+        <action
+            android:id="@+id/exp_1_to_output"
+            app:destination="@id/navigation_output" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_exp_2"
+        android:name="com.pawan.vlab.Exp2Fragment"
+        android:label="Perform"
+        tools:layout="@layout/fragment_exp_2">
+        <action
+            android:id="@+id/exp_2_to_output"
+            app:destination="@id/navigation_output" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_exp_3"
+        android:name="com.pawan.vlab.Exp3Fragment"
+        android:label="Perform"
+        tools:layout="@layout/fragment_exp_3">
+        <action
+            android:id="@+id/exp_3_to_output"
+            app:destination="@id/navigation_multiple_output" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_exp_4"
+        android:name="com.pawan.vlab.Exp4Fragment"
+        android:label="Perform"
+        tools:layout="@layout/fragment_exp_4">
+        <action
+            android:id="@+id/exp_4_to_output"
+            app:destination="@id/navigation_multiple_output" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exp_theory"
+        android:name="com.pawan.vlab.TheoryFragment"
+        android:label="Theory"
+        tools:layout="@layout/fragment_theory">
+        <action
+            android:id="@+id/exp_theory_to_theory_article"
+            app:destination="@id/navigation_theory_article" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_exp_circuit_diagram"
+        android:name="com.pawan.vlab.CircuitDiagramFragment"
+        android:label="Circuit Diagram"
+        tools:layout="@layout/fragment_circuit_diagram" />
+    <fragment
+        android:id="@+id/navigation_output"
+        android:name="com.pawan.vlab.OutputFragment"
+        android:label="Output"
+        tools:layout="@layout/fragment_output" />
+
+    <fragment
+        android:id="@+id/navigation_multiple_output"
+        android:name="com.pawan.vlab.MultipleOutputFragment"
+        android:label="Output"
+        tools:layout="@layout/fragment_multiple_output" />
+
+    <fragment
+        android:id="@+id/navigation_theory_article"
+        android:name="com.pawan.vlab.TheoryArticleFragment"
+        android:label="Theory"
+        tools:layout="@layout/fragment_theory_article" />
+</navigation>

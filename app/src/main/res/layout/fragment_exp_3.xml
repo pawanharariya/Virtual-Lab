@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <Button
+        android:id="@+id/check_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Check Connection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Output"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/white"
+        android:text="Undo"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@id/check_connection"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/op_amp_upper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/opamp_upper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/capacitor"
+        app:layout_constraintTop_toBottomOf="@id/resistor" />
+
+    <ImageView
+        android:id="@+id/op_amp_lower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/opamp_lower"
+        app:layout_constraintEnd_toEndOf="@id/op_amp_upper"
+        app:layout_constraintStart_toStartOf="@id/op_amp_upper"
+        app:layout_constraintTop_toBottomOf="@id/op_amp_upper" />
+
+    <ImageView
+        android:id="@+id/resistor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:src="@drawable/resistor"
+        app:layout_constraintEnd_toEndOf="@id/op_amp_upper"
+        app:layout_constraintStart_toStartOf="@id/op_amp_upper"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/capacitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/capacitor"
+        app:layout_constraintEnd_toStartOf="@id/op_amp_upper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resistor" />
+
+    <ImageView
+        android:id="@+id/ground_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/ground"
+        app:layout_constraintStart_toStartOf="@id/terminal8"
+        app:layout_constraintTop_toBottomOf="@id/op_amp_lower" />
+
+    <ImageView
+        android:id="@+id/ground_op_amp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/ground"
+        app:layout_constraintEnd_toStartOf="@id/op_amp_upper"
+        app:layout_constraintTop_toBottomOf="@id/op_amp_lower" />
+
+    <ImageView
+        android:id="@+id/ground_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/ground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/op_amp_lower" />
+
+    <RadioButton
+        android:id="@+id/terminal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/op_amp_upper"
+        app:layout_constraintStart_toStartOf="@id/op_amp_upper"
+        app:layout_constraintTop_toTopOf="@id/op_amp_upper" />
+
+    <RadioButton
+        android:id="@+id/terminal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/capacitor"
+        app:layout_constraintStart_toEndOf="@id/capacitor"
+        app:layout_constraintTop_toTopOf="@id/capacitor" />
+
+    <RadioButton
+        android:id="@+id/terminal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/resistor"
+        app:layout_constraintEnd_toStartOf="@id/resistor"
+        app:layout_constraintTop_toTopOf="@id/resistor" />
+
+    <RadioButton
+        android:id="@+id/terminal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/resistor"
+        app:layout_constraintStart_toEndOf="@id/resistor"
+        app:layout_constraintTop_toTopOf="@id/resistor" />
+
+    <RadioButton
+        android:id="@+id/terminal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="-17dp"
+        android:layout_marginEnd="2dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintStart_toEndOf="@id/op_amp_upper"
+        app:layout_constraintTop_toBottomOf="@id/op_amp_upper" />
+
+    <RadioButton
+        android:id="@+id/terminal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/terminal12"
+        app:layout_constraintEnd_toEndOf="@id/ground_output"
+        app:layout_constraintStart_toStartOf="@id/ground_output" />
+
+
+    <RadioButton
+        android:id="@+id/terminal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/capacitor"
+        app:layout_constraintStart_toStartOf="@id/capacitor"
+        app:layout_constraintTop_toTopOf="@id/capacitor" />
+
+    <RadioButton
+        android:id="@+id/terminal8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/terminal11"
+        app:layout_constraintEnd_toEndOf="@id/terminal7"
+        app:layout_constraintStart_toStartOf="@id/terminal7" />
+
+    <RadioButton
+        android:id="@+id/terminal11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-17dp"
+        android:checked="true"
+        android:enabled="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ground_input"
+        app:layout_constraintEnd_toEndOf="@id/ground_input"
+        app:layout_constraintStart_toStartOf="@id/ground_input" />
+
+    <RadioButton
+        android:id="@+id/terminal9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/op_amp_lower"
+        app:layout_constraintEnd_toStartOf="@id/op_amp_lower"
+        app:layout_constraintTop_toTopOf="@id/op_amp_lower" />
+
+    <RadioButton
+        android:id="@+id/terminal10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-17dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ground_op_amp"
+        app:layout_constraintEnd_toEndOf="@id/ground_op_amp"
+        app:layout_constraintStart_toStartOf="@id/ground_op_amp" />
+
+    <RadioButton
+        android:id="@+id/terminal12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-17dp"
+        android:checked="true"
+        android:enabled="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ground_output"
+        app:layout_constraintEnd_toEndOf="@id/ground_output"
+        app:layout_constraintStart_toStartOf="@id/ground_output" />
+
+    <com.pawan.vlab.utils.DrawView
+        android:id="@+id/drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/terminal8"
+        app:layout_constraintBottom_toTopOf="@id/terminal11"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:text="Vin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/terminal6"
+        app:layout_constraintBottom_toTopOf="@id/terminal12"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:text="Vout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
